@@ -14,24 +14,4 @@ A lightweight, easy to use, MVC Framework for Php
 - Flexible Models
 
 ## Documentation
-
-### Routing
-
-
-{% for user in users %}
-        {{user.name}}  
-    {% else %}
-        No Users found  
-   {% endfor %}
-
-   try {
-            $sql = "SELECT * FROM tasty";
-            $stmt = $this->db->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            return $stmt->fetchAll();
-            
-        } 
-        catch (PDOException $error) {
-            echo "Error in query:\n".$error->getMessage();
-        }
+[Read Traillamp's documentation here](https://github.com/EtorojahOkon/TrailLamp/releases/tag/v1.1.0)
