@@ -1,0 +1,13 @@
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule ^app/.*$ /$1 [R=301,NC,L]
+
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|png|gif|svg)$ [NC]
+RewriteCond %{REQUEST_URI} !^/pages(/|$)
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?page=$1 [L,QSA]
+
